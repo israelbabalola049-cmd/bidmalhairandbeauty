@@ -1,0 +1,199 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #111111;
+  color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #000000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFD700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #FFFFFF;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #FFFFFF;
+  transition: all 0.3s;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #000000;
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-menu a {
+  padding: 15px 0;
+  border-top: 1px solid #333;
+}
+
+.mobile-menu a:hover {
+  color: #FFD700;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px;
+
+  /* Add these lines for the background image */
+  background: url('ss.jpg') no-repeat center center;
+  background-size: cover;
+
+  position: relative;
+  color: #FFFFFF; /* ensures text is visible */
+}
+
+/* Optional overlay to make text pop */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* adjust darkness */
+  z-index: 1;
+}
+
+/* Keep text above overlay */
+.hero h1,
+.hero p,
+.hero .cta-btn {
+  position: relative;
+  z-index: 2;
+}
+/* Sections */
+section {
+  padding: 80px 50px;
+}
+
+.welcome, .about, .cta-section, .reviews {
+  background-color: #111111;
+}
+
+.welcome h2, .about h2, .cta-section h2, .reviews h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 36px;
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+.welcome p, .about p, .cta-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.cta-section .cta-btn {
+  padding: 15px 35px;
+  background-color: #FFD700;
+  color: #000000;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cta-section .cta-btn:hover {
+  background-color: #e6c200;
+}
+
+/* Reviews */
+.reviews .review {
+  background-color: #000000;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+
+.reviews .stars {
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 14px;
+  color: #CCCCCC;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+}
