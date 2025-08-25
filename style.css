@@ -97,7 +97,7 @@ a {
   padding-top: 80px;
 
   /* Add these lines for the background image */
-  background: url('ss.jpg') no-repeat center center;
+  background: url('img.jpg') no-repeat center center;
   background-size: cover;
 
   position: relative;
@@ -197,3 +197,4 @@ footer {
     font-size: 16px;
   }
 }
+
